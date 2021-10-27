@@ -8,7 +8,7 @@ package com.sinosoft.test.testA;
 public class Test {
     public void test(){
         System.out.printf("hahahaha2222222222333332222222222222222");
-        System.out.printf("hahahaha2222222222333332222222222222222");
+        System.out.printf("hahahaha2222222222333332222222222222222333333333333333333333333333333333");
         System.out.printf("hahahaha2222222222333332222222222222222");
     }
 }
