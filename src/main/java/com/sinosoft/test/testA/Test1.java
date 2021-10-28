@@ -9,4 +9,7 @@ public class Test1 {
     public void test(){
         System.out.printf("Test1");
     }
+    public void test2(){
+        System.out.printf("Test1");
+    }
 }
