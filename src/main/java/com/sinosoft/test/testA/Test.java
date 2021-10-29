@@ -12,4 +12,7 @@ public class Test {
     public void test2(){
         System.out.printf("hahahaha2222222222333332222222222222222");
     }
+    public void test3(){
+        System.out.printf("hahahaha2222222222333332222222222222222");
+    }
 }
