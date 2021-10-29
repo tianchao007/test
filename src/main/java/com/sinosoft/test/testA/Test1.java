@@ -7,6 +7,6 @@ package com.sinosoft.test.testA;
  */
 public class Test1 {
     public void test(){
-        System.out.printf("Test1");
+        System.out.printf("hahahaha2222222222333332222222222222222");
     }
 }

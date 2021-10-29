@@ -11,4 +11,10 @@ public class Test {
         System.out.printf("hahahaha2222222222333332222222222222222333333333333333333333333333333333");
         System.out.printf("hahahaha222222222233333222222222222222211112222");
     }
+    public void test2(){
+        System.out.printf("hahahaha2222222222333332222222222222222");
+    }
+    public void test3(){
+        System.out.printf("hahahaha2222222222333332222222222222222");
+    }
 }
