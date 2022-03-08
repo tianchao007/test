@@ -12,14 +12,13 @@ public class Student implements Cloneable{
     public Student() {
     }
 
-    public Student(String name, int age, Address address) {
+    public Student(String name, int age) {
         this.name = name;
         this.age = age;
-        this.address = address;
+        this.address = new Address();
     }
-
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
 
@@ -43,7 +42,7 @@ public class Student implements Cloneable{
         return address;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setAddress(String provices,String city) {
+        address.setAddress(provices, city);
     }
 }

@@ -5,13 +5,17 @@ package com.sinosoft.test.testA.bean;
  * @Description TODO
  * @Date 2022/3/8 14:36
  */
-public class Address {
+public class Address implements Cloneable{
     private String provices;
     private String city;
 
     public Address(String provices, String city) {
         this.provices = provices;
         this.city = city;
+    }
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 
     public Address() {
@@ -30,6 +34,11 @@ public class Address {
     }
 
     public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setAddress(String provices,String city){
+        this.provices = provices;
         this.city = city;
     }
 }

@@ -1,6 +1,5 @@
 package com.sinosoft.test.testA;
 
-import com.sinosoft.test.testA.bean.Address;
 import com.sinosoft.test.testA.bean.Student;
 
 /**
@@ -9,7 +8,7 @@ import com.sinosoft.test.testA.bean.Student;
  * @Date 2022/3/2 11:02
  */
 public class TestString {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
 //        String s1 = new String("hello");
 //        String intern1 = s1.intern();
 //        String s2 = "hello";
@@ -32,16 +31,23 @@ public class TestString {
 //        System.out.println("threadLocal1:"+threadLocal.get());
 //        threadLocal2.set("bbb");
 //        System.out.println("threadLocal2:"+threadLocal2.get());
-        Student student = new Student();
-        student.setName("田超");
-        student.setAge(30);
-        Address address = new Address();
-        address.setCity("河北省");
-        address.setProvices("沧州市");
-        student.setAddress(address);
-        System.out.println("student:"+student);
+        Student student = new Student("田超",30);
+        student.setAddress("河北省","沧州市");
+        Student student2 = (Student)student.clone();
+        student2.setName("lllll");
 
-        Student student1 = student;
-        System.out.println("student1:"+student1);
+
+        System.out.println("student:"+student);
+        System.out.println("student.getPname:"+student.getAddress().hashCode());
+        System.out.println("student.getPname:"+student.getName());
+
+        System.out.println("student2:"+student2);
+        System.out.println("student2.getPname:"+student2.getAddress().hashCode());
+        System.out.println("student2.getPname:"+student2.getName());
+
+        student2.setAddress("北京市","通州区");
+
+        System.out.println("student->address:"+student.getAddress().getCity() +":"+student.getAddress().getProvices());
+        System.out.println("student2->address:"+student2.getAddress().getCity() +":"+student2.getAddress().getProvices());
     }
 }
